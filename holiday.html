@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holiday Finder</title>
+  </head>
+  <body>
+    <div id="message">some message here</div>
+    <!-- where you display the program's output (div element) -->
+    <script>
+      const dt = new Date(); //constructor function to get the date
+      const month = dt.getMonth(); //gets month from above date - the first month of the year starts from 0
+      let msg; //not initialized
+      switch (month) {
+        case 0:
+          msg = "January 4 is National Spaghetti Day!";
+          break;
+        case 1:
+          msg = "February 9 is National Pizza Day!";
+          break;
+        case 2:
+          msg = "March 26 is National Spinach Day!";
+          break;
+        case 3:
+          msg = "April 26 is National Pretzel Day!";
+          break;
+        default:
+          msg = "No holidays this month.";
+      }
+      const el = document.getElementById("message"); //locates the html element where you want to render the message and assigns it to a constant named el
+      el.innerHTML = msg; //innerHTML property, is changed to the value of the msg variable
+    </script>
+  </body>
+</html>
